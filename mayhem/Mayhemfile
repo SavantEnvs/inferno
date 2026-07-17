@@ -1,0 +1,10 @@
+project: savantenvs/inferno
+target: collapse-fuzz
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/collapse-fuzz/testsuite
+
+cmds:
+  - cmd: /mayhem/collapse_fuzz
+    libfuzzer: true

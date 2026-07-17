@@ -1,0 +1,24 @@
+[package]
+name = "inferno-fuzz"
+version = "0.0.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.inferno]
+path = "../.."
+
+[[bin]]
+name = "collapse_fuzz"
+path = "fuzz_targets/collapse_fuzz.rs"
+test = false
+doc = false
+
+[workspace]
+members = ["."]
